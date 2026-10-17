@@ -4,478 +4,185 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Edge Free Course Plan</title>
-<meta name="description" content="Edge Trading Academy team guide: free course to broker account to premium, step by step, with the lowest-cost software stack.">
+<meta name="description" content="Edge Trading Academy: the simple 6-step journey from free course lead to funded, long-term client.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap">
 <style>
-/* Guide layout: sticky top nav, one column of clear sections. Core is a clickable 8-step stepper with one detail panel. White + Edge green, single light theme by choice. */
+/* Simple: hero, one flow chart that mirrors the team's sketch, then one card per step. White + Edge green, light only by choice. */
 :root{
   color-scheme:light;
-  --bg:#FFFFFF; --tint:#F3FAF6; --tint2:#E6F7EE; --ink:#0B2B26; --mut:#4F6964; --line:#DDE9E4;
-  --green:#08E186; --deep:#03624C; --mint:#C9F6DF; --warn:#B4532A; --warnbg:#FFF4EC;
+  --bg:#FFFFFF; --tint:#F2FAF6; --tint2:#E3F7EC; --ink:#0B2B26; --mut:#4F6964; --line:#DCE8E3;
+  --green:#08E186; --deep:#03624C;
   --display:"Barred Black","Archivo Black","Arial Black",Impact,sans-serif;
   --body:"Manrope",Arial,Helvetica,sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:1.04;margin:0;text-wrap:balance}
-h1{font-size:clamp(2.3rem,5.6vw,4rem)}
-h2{font-size:clamp(1.7rem,3.4vw,2.4rem)}
-h3{font-size:1.15rem;letter-spacing:.01em}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:1.05;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.2rem,5.4vw,3.8rem)}
+h2{font-size:clamp(1.6rem,3.2vw,2.2rem)}
+h3{font-size:1.3rem}
 p{margin:0}
-.mut{color:var(--mut)}
 .k{font-family:var(--mono);font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--deep)}
-mark{background:linear-gradient(transparent 60%,var(--mint) 60%);color:inherit;padding:0 .05em}
-a{color:var(--deep)}
+mark{background:linear-gradient(transparent 60%,#C3F4DA 60%);color:inherit}
 :focus-visible{outline:3px solid var(--green);outline-offset:2px}
-button{font:inherit;color:inherit;cursor:pointer}
 
-/* top nav */
-.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;gap:20px;height:60px}
-.brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-size:1rem;letter-spacing:.03em;white-space:nowrap;text-decoration:none;color:var(--ink)}
-.brand span{font-family:var(--body);font-weight:700;font-size:.9rem;letter-spacing:0;color:var(--mut);text-transform:none}
-.nav{display:flex;gap:2px;overflow-x:auto;margin-left:auto;scrollbar-width:none}
-.nav::-webkit-scrollbar{display:none}
-.nav a{padding:8px 11px;border-radius:8px;font-weight:700;font-size:.88rem;color:var(--mut);text-decoration:none;white-space:nowrap}
-.nav a:hover{background:var(--tint);color:var(--ink)}
-.nav a.on{background:var(--tint2);color:var(--deep)}
+header{padding-block:28px 0}
+.brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-size:1rem;letter-spacing:.03em}
+.hero{padding-block:44px 36px;display:grid;gap:16px}
+.hero p.lead{font-size:1.15rem;color:var(--mut);max-width:58ch}
 
-/* hero */
-.hero{padding-block:56px 40px;display:grid;gap:22px}
-.hero .lead{font-size:1.2rem;max-width:62ch;color:var(--mut)}
-.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:6px}
-.fact{border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:grid;gap:2px}
-.fact b{font-family:var(--display);font-weight:400;font-size:1.6rem;color:var(--deep)}
-.fact span{font-size:.92rem;color:var(--mut)}
+/* flow chart */
+.chart{background:var(--tint);border-radius:22px;padding:34px 28px}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr)) 64px minmax(0,1.1fr);align-items:center;gap:0}
+.node{position:relative;display:grid;gap:8px;align-content:start;background:#fff;border:1.5px solid var(--ink);border-radius:14px;padding:16px 14px;text-decoration:none;color:var(--ink);min-height:150px;margin-right:30px;transition:transform .15s,box-shadow .15s}
+.node:hover{transform:translateY(-2px);box-shadow:0 8px 20px -10px rgba(11,43,38,.35)}
+.node .n{font-family:var(--display);font-size:1rem;width:32px;height:32px;border-radius:8px;display:grid;place-items:center;background:var(--tint2);color:var(--deep)}
+.node b{font-weight:800;font-size:.98rem;line-height:1.3}
+.node span{font-size:.85rem;color:var(--mut);line-height:1.4}
+.node.money{background:var(--green);border-color:var(--deep)}
+.node.money .n{background:#fff}
+.node.money span{color:var(--ink)}
+.node:not(.last)::after{content:"";position:absolute;right:-26px;top:50%;width:20px;height:2px;background:var(--ink)}
+.node:not(.last)::before{content:"";position:absolute;right:-27px;top:calc(50% - 5px);border:6px solid transparent;border-left:8px solid var(--ink);border-right:0}
+.node.last{margin-right:0}
+.split{align-self:stretch;position:relative}
+.split svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.ends{display:grid;gap:22px}
+.ends .node{margin:0;min-height:0}
 
-section{padding-block:56px;border-top:1px solid var(--line)}
-.sh{display:grid;gap:10px;margin-bottom:28px;max-width:72ch}
-
-/* stepper */
-.steps{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:8px;position:relative}
-.step{position:relative;border:1.5px solid var(--line);background:var(--bg);border-radius:14px;padding:14px 12px 12px;text-align:left;display:grid;gap:6px;align-content:start;min-height:112px;transition:border-color .15s,background .15s}
-.step:hover{border-color:var(--deep)}
-.step .n{font-family:var(--display);font-size:1.05rem;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:var(--tint2);color:var(--deep)}
-.step .t{font-weight:800;font-size:.92rem;line-height:1.25}
-.step.money .n{background:var(--green);color:var(--ink)}
-.step[aria-selected="true"]{border-color:var(--deep);background:var(--tint);box-shadow:inset 0 0 0 1px var(--deep)}
-.step[aria-selected="true"] .n{background:var(--deep);color:#fff}
-.step:not(:last-child):not(.b1)::after{content:"";position:absolute;right:-9px;top:30px;width:10px;height:2px;background:var(--deep)}
-.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:.88rem;color:var(--mut)}
-.legend i{display:inline-block;width:12px;height:12px;border-radius:4px;vertical-align:-1px;margin-right:6px}
-
-.panel{margin-top:18px;border:1.5px solid var(--deep);border-radius:18px;overflow:hidden}
-.ph{background:var(--deep);color:#fff;padding:20px 24px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between}
-.ph h3{font-size:1.5rem}
-.ph .owner{font-family:var(--mono);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.14);padding:6px 10px;border-radius:7px}
-.pb{padding:22px 24px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.box{background:var(--tint);border-radius:12px;padding:16px;min-width:0}
+/* steps */
+section{padding-block:56px 10px}
+.sh{display:grid;gap:8px;margin-bottom:24px}
+.steps{display:grid;gap:16px}
+.step{display:grid;grid-template-columns:120px 1fr;gap:24px;border:1px solid var(--line);border-radius:18px;padding:26px;scroll-margin-top:20px}
+.step.money{border:1.5px solid var(--deep)}
+.num{font-family:var(--display);font-size:3.2rem;line-height:1;color:var(--deep)}
+.step.money .num{color:var(--ink);background:var(--green);border-radius:14px;width:88px;height:88px;display:grid;place-items:center;font-size:2.3rem}
+.body{display:grid;gap:14px;min-width:0}
+.body > p{color:var(--mut);max-width:70ch}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.box{background:var(--tint);border-radius:12px;padding:16px 18px}
 .box .k{display:block;margin-bottom:6px}
-.box ul{margin:0;padding-left:18px}
+.box ul{margin:0;padding-left:20px}
 .box li{margin:3px 0}
-.box.tool{background:var(--tint2)}
-.box.watch{background:#fff;border:1px solid var(--line)}
-.pf{padding:0 24px 22px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
-.note{background:var(--warnbg);border-left:4px solid var(--warn);border-radius:0 10px 10px 0;padding:12px 14px;font-size:.95rem;flex:1 1 400px}
-.note b{color:var(--warn)}
-.navbtns{display:flex;gap:8px}
-.btn{border:1.5px solid var(--deep);background:#fff;color:var(--deep);border-radius:10px;padding:9px 16px;font-weight:800;font-size:.92rem}
-.btn:hover{background:var(--tint2)}
-.btn.fill{background:var(--deep);color:#fff}
-.btn.fill:hover{background:var(--ink)}
-.btn:disabled{opacity:.35;cursor:default}
+.branch{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.branch .step{grid-template-columns:1fr;gap:14px}
 
-.dflow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;margin-top:14px}
-.dn{border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:grid;gap:4px;align-content:start}
-.dn b{font-family:var(--display);font-weight:400;font-size:1.3rem;text-transform:uppercase}
-.dn p{font-size:.93rem;color:var(--mut)}
-.dn.on{border:1.5px solid var(--deep);background:var(--tint)}
-.darr{align-self:center;font-family:var(--mono);font-weight:700;color:var(--deep);font-size:1.3rem}
-@media (max-width:700px){.dflow{grid-template-columns:1fr}.darr{transform:rotate(90deg);justify-self:center}}
-/* calendar */
-.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
-.day{border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:4px;align-content:start;min-width:0}
-.day.live{background:var(--tint2);border-color:transparent}
-.day b{font-weight:800}
-.day p{font-size:.9rem;color:var(--mut)}
-.month{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:14px}
-.mw{background:var(--tint);border-radius:12px;padding:14px 16px}
-.mw.spare{background:#fff;border:1.5px dashed var(--line)}
-.mw b{display:block;font-weight:800}
+footer{border-top:1px solid var(--line);margin-top:60px;padding-block:28px 44px;color:var(--mut);font-size:.9rem}
 
-/* options */
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
-.tab{border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px 16px;text-align:left;display:grid;gap:2px;min-width:200px;flex:1 1 220px}
-.tab b{font-weight:800}
-.tab span{font-size:.88rem;color:var(--mut)}
-.tab[aria-selected="true"]{border-color:var(--deep);background:var(--tint);box-shadow:inset 0 0 0 1px var(--deep)}
-.tab .rec{font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.1em;color:var(--ink);background:var(--green);padding:2px 7px;border-radius:5px;justify-self:start;margin-bottom:4px}
-.opt{border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.opt .sum{padding:18px 22px;background:var(--tint);display:flex;flex-wrap:wrap;gap:10px 30px;align-items:baseline;justify-content:space-between}
-.opt .sum b{font-family:var(--display);font-weight:400;font-size:1.7rem;color:var(--deep)}
-.tbl{overflow-x:auto}
-table{border-collapse:collapse;width:100%;min-width:720px;font-size:.95rem}
-th,td{text-align:left;vertical-align:top;padding:12px 16px;border-bottom:1px solid var(--line)}
-th{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);font-weight:700}
-tr:last-child td{border-bottom:0}
-td b{font-weight:800}
-.cost{font-family:var(--mono);font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
-.free{color:var(--deep)}
-.tips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
-.tip{background:var(--tint2);border-radius:14px;padding:16px 18px;display:grid;gap:6px;align-content:start}
-.tip b{font-weight:800}
-.tip p{font-size:.95rem}
-
-/* build-our-own diagram */
-.arch{display:grid;grid-template-columns:1fr auto 1.2fr auto 1fr;gap:12px;align-items:center}
-.col{display:grid;gap:10px}
-.node{border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff}
-.node b{display:block;font-weight:800;font-size:.95rem}
-.node span{font-size:.85rem;color:var(--mut)}
-.node.core{border-color:var(--deep);background:var(--tint);padding:20px}
-.node.core b{font-size:1.1rem}
-.arr{font-family:var(--mono);font-weight:700;color:var(--deep);font-size:1.4rem;text-align:center}
-.phases3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
-.ph3{border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:grid;gap:8px;align-content:start}
-.ph3 ul{margin:0;padding-left:18px;font-size:.95rem}
-
-/* syllabus */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.course{border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:12px;align-content:start;min-width:0}
-.course.prem{border:1.5px solid var(--deep)}
-.mods{list-style:none;margin:0;padding:0}
-.mods li{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
-.mods li .k{padding-top:3px}
-.mods b{display:block}
-.mods span{font-size:.92rem;color:var(--mut)}
-
-/* cards grid */
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
-.card{border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:grid;gap:8px;align-content:start}
-.card ul{margin:0;padding-left:18px;font-size:.95rem}
-.script{background:var(--tint);border-radius:14px;padding:16px;display:grid;gap:10px;min-width:0}
-.script .r{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.script pre{margin:0;white-space:pre-wrap;font-family:var(--body);font-size:.93rem;line-height:1.55;background:#fff;border-radius:10px;padding:14px;border:1px solid var(--line)}
-.copy{border:1.5px solid var(--deep);background:#fff;color:var(--deep);border-radius:8px;padding:5px 12px;font-weight:800;font-size:.82rem}
-.kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
-.kpi{background:var(--tint);border-radius:12px;padding:14px 16px;display:grid;gap:2px}
-.kpi b{font-family:var(--display);font-weight:400;font-size:1.5rem;color:var(--deep)}
-.kpi span{font-size:.85rem;color:var(--mut)}
-.roll{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.rp{border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:10px;align-content:start}
-.rp label{display:flex;gap:10px;align-items:flex-start;font-size:.93rem;cursor:pointer}
-.rp input{margin-top:4px;accent-color:var(--deep);width:17px;height:17px;flex:none}
-.rp input:checked + span{text-decoration:line-through;color:var(--mut)}
-.bar{height:6px;background:var(--tint2);border-radius:6px;overflow:hidden}
-.bar i{display:block;height:100%;width:0;background:var(--deep);transition:width .3s}
-
-footer{border-top:1px solid var(--line);padding-block:36px 50px;color:var(--mut);font-size:.88rem;display:grid;gap:10px}
-footer ul{margin:0;padding-left:18px}
-#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:#fff;font-weight:700;font-size:.9rem;padding:10px 16px;border-radius:8px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:30}
-#toast.show{opacity:1}
-
-@media (max-width:1000px){
-  .steps{grid-template-columns:repeat(9,150px);overflow-x:auto;padding-bottom:6px}
-  .pb,.tips,.phases3{grid-template-columns:1fr 1fr}
-  .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .roll{grid-template-columns:1fr 1fr}
-  .arch{grid-template-columns:1fr}
-  .arr{transform:rotate(90deg)}
+@media (max-width:980px){
+  .flow{grid-template-columns:1fr;gap:0}
+  .node{margin:0 0 30px;min-height:0}
+  .node:not(.last)::after{right:auto;left:50%;top:auto;bottom:-24px;width:2px;height:18px}
+  .node:not(.last)::before{right:auto;left:calc(50% - 5px);top:auto;bottom:-27px;border:6px solid transparent;border-top:8px solid var(--ink);border-bottom:0}
+  .split{display:none}
+  .flow > .node.last{margin-bottom:30px}
+  .flow > .node.last::after{content:"";position:absolute;left:50%;bottom:-24px;width:2px;height:18px;background:var(--ink);right:auto;top:auto}
+  .flow > .node.last::before{content:"";position:absolute;left:calc(50% - 5px);bottom:-27px;border:6px solid transparent;border-top:8px solid var(--ink);border-bottom:0}
+  .ends{grid-template-columns:1fr 1fr;gap:12px}
+  .branch{grid-template-columns:1fr}
 }
-@media (max-width:700px){
-  .brand span{display:none}
-  .facts,.month{grid-template-columns:1fr 1fr}
-  .week{grid-template-columns:1fr 1fr}
-  .pb,.tips,.phases3,.two,.roll{grid-template-columns:1fr}
-  .box.watch{grid-column:auto!important}
-  .kpis{grid-template-columns:1fr 1fr}
+@media (max-width:640px){
+  .step{grid-template-columns:1fr;gap:12px;padding:20px}
+  .num{font-size:2.4rem}
+  .step.money .num{width:64px;height:64px;font-size:1.8rem}
+  .cols,.ends{grid-template-columns:1fr}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.node{transition:none}}
 </style>
 </head>
 <body>
 
-<header class="top"><div class="wrap">
-  <a class="brand" href="#start"><svg width="22" height="22" viewBox="0 0 34 34" aria-hidden="true"><path d="M4 26 L16 10 L22 18 L30 6" fill="none" stroke="#08E186" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 6 H30 V13" fill="none" stroke="#08E186" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>EDGE <span>Free Course Plan</span></a>
-  <nav class="nav" aria-label="Sections">
-    <a href="#flow">The 8 steps</a><a href="#week">Weekly rhythm</a><a href="#tools">Software & cost</a><a href="#build">Build our own</a><a href="#syllabus">Syllabus</a><a href="#team">Team</a><a href="#scripts">Scripts</a><a href="#kpi">KPIs</a><a href="#rollout">Rollout</a>
-  </nav>
-</div></header>
+<header class="wrap"><div class="brand"><svg width="24" height="24" viewBox="0 0 34 34" aria-hidden="true"><path d="M4 26 L16 10 L22 18 L30 6" fill="none" stroke="#08E186" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 6 H30 V13" fill="none" stroke="#08E186" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>EDGE TRADING ACADEMY</div></header>
 
-<main class="wrap" id="start">
-
+<main class="wrap">
 <div class="hero">
-  <p class="k">Edge Trading Academy · team guide · v3 · 17 Oct 2026</p>
-  <h1>From free class to <mark>funded student</mark></h1>
-  <p class="lead">This page explains our whole student journey in 8 steps. Click any step to see what happens, who does it, which tool runs it (mostly ones we already have), what we post, and the number we check. Then pick the software plan that fits our budget.</p>
-  <div class="facts">
-    <div class="fact"><b>8 steps</b><span>Lead to long-term client</span></div>
-    <div class="fact"><b>4 groups</b><span>One new batch group each week</span></div>
-    <div class="fact"><b>$50</b><span>Broker deposit unlocks premium</span></div>
-    <div class="fact"><b>~$0–10/mo</b><span>Extra software cost, using tools we already have</span></div>
+  <p class="k">Free course plan · team version</p>
+  <h1>From free class to <mark>long-term client</mark></h1>
+  <p class="lead">Six simple steps. A student joins our free course, learns with us, opens a broker account with a $50 deposit, then stays with us and upgrades. Click any box to read that step.</p>
+</div>
+
+<div class="chart" aria-label="Flow chart of the 6 steps">
+  <div class="flow">
+    <a class="node" href="#s1"><span class="n">1</span><b>Leads for free course</b><span>Organic and paid</span></a>
+    <a class="node" href="#s2"><span class="n">2</span><b>Add to WhatsApp community</b><span>4 groups a month, min. 3 batches</span></a>
+    <a class="node" href="#s3"><span class="n">3</span><b>Classes & marketing</b><span>Videos, posters, hype, “what we give today”</span></a>
+    <a class="node" href="#s4"><span class="n">4</span><b>Class & premium announcement</b><span>Reveal the premium community</span></a>
+    <a class="node money last" href="#s5"><span class="n">5</span><b>Lead split to sales</b><span>Button → sales team → broker account + $50</span></a>
+    <div class="split" aria-hidden="true"><svg viewBox="0 0 64 100" preserveAspectRatio="none"><path d="M0 50 H20 C34 50 34 22 50 22 H60" fill="none" stroke="#0B2B26" stroke-width="2" vector-effect="non-scaling-stroke"/><path d="M20 50 C34 50 34 78 50 78 H60" fill="none" stroke="#0B2B26" stroke-width="2" vector-effect="non-scaling-stroke"/></svg></div>
+    <div class="ends">
+      <a class="node money last" href="#s6a"><span class="n">6A</span><b>Retention & deposits</b><span>Campaigns and long-term relationship</span></a>
+      <a class="node money last" href="#s6b"><span class="n">6B</span><b>Upgrade course</b><span>Pitch the premium course</span></a>
+    </div>
   </div>
 </div>
 
-<!-- FLOW -->
-<section id="flow">
-  <div class="sh"><p class="k">Start here</p><h2>The 8 steps</h2>
-    <p class="mut">Click a step. Green numbers are where money or a commitment happens. After step 7 the student goes into both 8A and 8B.</p></div>
-  <div class="steps" role="tablist" aria-label="Funnel steps" id="steps"></div>
-  <div class="legend"><span><i style="background:var(--tint2)"></i>Attract and teach</span><span><i style="background:var(--green)"></i>Money step</span><span><i style="background:var(--deep)"></i>Selected</span></div>
-  <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
-  <h3 style="margin-top:34px">Where each student's data lives</h3>
-  <div class="dflow">
-    <div class="dn"><span class="k">Steps 1–6 · every lead</span><b>Google Sheets</b><p>Name, phone, source ad, batch, attended days, rep.</p></div>
-    <div class="darr" aria-hidden="true">→</div>
-    <div class="dn"><span class="k">Steps 1–8 · every lead with email</span><b>MailerLite</b><p>Batch tag, class-day emails, offers, retention campaigns.</p></div>
-    <div class="darr" aria-hidden="true">→</div>
-    <div class="dn on"><span class="k">Step 7 onward · funded $50 + joined premium</span><b>Odoo</b><p>Client record, deposit, rep, check-ins, upgrade pipeline.</p></div>
-  </div>
-</section>
+<section>
+  <div class="sh"><p class="k">What happens at each step</p><h2>The steps explained</h2></div>
+  <div class="steps">
 
-<!-- WEEK -->
-<section id="week">
-  <div class="sh"><p class="k">4 groups a month · at least 3 full batches</p><h2>Weekly rhythm</h2>
-    <p class="mut">Every week a new batch group opens. Three batches a month always run in full. Week 4 runs if we have enough leads, or becomes a Malayalam or Arabic batch.</p></div>
-  <div class="month">
-    <div class="mw"><span class="k">Week 1</span><b>Batch A</b></div>
-    <div class="mw"><span class="k">Week 2</span><b>Batch B</b></div>
-    <div class="mw"><span class="k">Week 3</span><b>Batch C</b></div>
-    <div class="mw spare"><span class="k">Week 4</span><b>Batch D or buffer</b></div>
-  </div>
-  <div class="week">
-    <div class="day"><span class="k">Sat–Sun</span><b>Group opens</b><p>Welcome video, mentor intro, schedule poster. Ads at full budget.</p></div>
-    <div class="day live"><span class="k">Mon</span><b>Class 1</b><p>Hype video at noon, homework after class.</p></div>
-    <div class="day live"><span class="k">Tue</span><b>Class 2</b><p>Student story post.</p></div>
-    <div class="day live"><span class="k">Wed</span><b>Class 3</b><p>Free gift: position-size sheet.</p></div>
-    <div class="day live"><span class="k">Thu</span><b>Class 4</b><p>Premium community teaser.</p></div>
-    <div class="day live"><span class="k">Fri</span><b>Class 5</b><p>Roadmap, premium reveal, “Claim my seat” button.</p></div>
-    <div class="day"><span class="k">Sat–Mon</span><b>Close</b><p>Sales calls, accounts, deposits. Offer ends Sunday night.</p></div>
-  </div>
-</section>
+    <article class="step" id="s1"><div class="num">01</div><div class="body">
+      <h3>Leads for the free course</h3>
+      <p>We bring people into the free course from our own social pages and from paid ads. Every new lead gets a welcome message within a minute.</p>
+      <div class="cols">
+        <div class="box"><span class="k">Team does</span><ul><li>Post free-class reels and stories every day</li><li>Run paid ads each week before a batch</li><li>Note where every lead came from</li></ul></div>
+        <div class="box"><span class="k">What we post</span><ul><li>“5 days. Free. Live with a real trader.”</li><li>Short tips that show how we teach</li><li>Real student stories (with permission)</li></ul></div>
+      </div></div></article>
 
-<!-- TOOLS -->
-<section id="tools">
-  <div class="sh"><p class="k">Lowest cost first</p><h2>Software & cost</h2>
-    <p class="mut">Three ways to run the same flow. We recommend starting with what we already have and moving to Build our own within 60 days. Ad spend and WhatsApp message fees are extra in every plan.</p></div>
-  <div class="tabs" role="tablist" aria-label="Software plans" id="optTabs"></div>
-  <div class="opt" id="optBody"></div>
+    <article class="step" id="s2"><div class="num">02</div><div class="body">
+      <h3>Add to the general WhatsApp community</h3>
+      <p>Each lead joins the WhatsApp community and the group for the next batch. We open 4 groups a month, one per week, and run at least 3 full batches.</p>
+      <div class="cols">
+        <div class="box"><span class="k">Team does</span><ul><li>Open a new batch group every week</li><li>Send each lead the right group link</li><li>Remind anyone who hasn’t joined</li></ul></div>
+        <div class="box"><span class="k">What we post</span><ul><li>Mentor welcome video</li><li>Group rules and class schedule poster</li><li>“Turn on notifications” reminder</li></ul></div>
+      </div></div></article>
 
-  <h3 style="margin-top:34px">How to keep WhatsApp costs near zero</h3>
-  <div class="tips">
-    <div class="tip"><b>Run batch groups from the free app</b><p>Announcements, reminders and class links inside the WhatsApp Community are free. Use the paid API only for 1-to-1 automation.</p></div>
-    <div class="tip"><b>Get leads through Click-to-WhatsApp ads</b><p>When a lead messages us from a Click-to-WhatsApp ad, replies in the free entry window cost nothing (72 hours, per Meta partners).</p></div>
-    <div class="tip"><b>Reply fast, inside 24 hours</b><p>From October 2026 each number gets 1,000 free service replies a month. Templates sent outside the chat window are charged.</p></div>
-    <div class="tip"><b>Alert sales reps on Telegram</b><p>A Telegram bot is free. Alerting reps there instead of by WhatsApp template saves a message fee per lead.</p></div>
-    <div class="tip"><b>Teach on our Workspace Meet</b><p>Free Zoom stops group calls at 40 minutes and free Gmail Meet at 60. Our Workspace Meet avoids both limits, so we need no Zoom licence.</p></div>
-    <div class="tip"><b>Odoo only for real clients</b><p>Free leads stay in Sheets and MailerLite. Only funded premium students go into Odoo, so the CRM stays clean and sales sees real clients.</p></div>
-  </div>
-</section>
+    <article class="step" id="s3"><div class="num">03</div><div class="body">
+      <h3>Classes, product marketing & content</h3>
+      <p>We teach the free classes live and fill the group with content that builds trust and excitement. Each day the student gets something useful.</p>
+      <div class="cols">
+        <div class="box"><span class="k">Team does</span><ul><li>Teach the free classes live, same time every day</li><li>Follow the posting plan for the batch</li><li>Share the recording with anyone who missed it</li></ul></div>
+        <div class="box"><span class="k">What we post</span><ul><li>Class hype videos before each class</li><li>Posters and myth-vs-fact posts</li><li>“What we give today” free gift</li><li>Emotional posts: why most traders fail, and our way</li></ul></div>
+      </div></div></article>
 
-<!-- BUILD -->
-<section id="build">
-  <div class="sh"><p class="k">Development option · least cost long term</p><h2>Build our own system</h2>
-    <p class="mut">One free automation server connects everything. We pay Meta directly for WhatsApp, with no monthly fee to a reseller. One developer can build it in about 3–4 weeks.</p></div>
-  <div class="arch">
-    <div class="col">
-      <div class="node"><b>Meta ads + lead forms</b><span>Leads come in</span></div>
-      <div class="node"><b>WhatsApp Cloud API</b><span>Direct from Meta, pay per message</span></div>
-      <div class="node"><b>Google Meet + Forms</b><span>Attendance / check-in</span></div>
-      <div class="node"><b>Broker IB portal</b><span>Daily deposit export</span></div>
+    <article class="step" id="s4"><div class="num">04</div><div class="body">
+      <h3>Class & premium community announcement</h3>
+      <p>On the last free class we announce the premium community and what students get inside it. Students unlock it by opening a broker account and depositing $50.</p>
+      <div class="cols">
+        <div class="box"><span class="k">Team does</span><ul><li>Announce premium live in the final class</li><li>Post the announcement in the group with a button</li><li>Send countdown reminders before the offer ends</li></ul></div>
+        <div class="box"><span class="k">What we post</span><ul><li>Premium community tour video</li><li>Offer poster with the deadline</li><li>Common questions answered</li></ul></div>
+      </div></div></article>
+
+    <article class="step money" id="s5"><div class="num">05</div><div class="body">
+      <h3>Automated lead split to the sales team</h3>
+      <p>Students tap the WhatsApp button and are sent to a sales team member automatically, shared evenly. The sales team helps them open a broker account and make the $50 deposit.</p>
+      <div class="cols">
+        <div class="box"><span class="k">Team does</span><ul><li>Reply to every student quickly, within 15 minutes</li><li>Guide them through account opening step by step</li><li>Confirm the $50 deposit, then give premium access</li></ul></div>
+        <div class="box"><span class="k">What we say</span><ul><li>A friendly intro voice note from the sales person</li><li>A simple “how to open your account” guide</li><li>Clear answers on deposit and withdrawal</li></ul></div>
+      </div></div></article>
+
+    <div class="branch">
+      <article class="step money" id="s6a"><div class="num">6A</div><div class="body">
+        <h3>Retention & deposit campaigns</h3>
+        <p>We stay close to every client for the long term and run campaigns that keep them active and growing their account.</p>
+        <div class="box"><span class="k">Team does</span><ul><li>Weekly live market session for clients</li><li>A new campaign every month</li><li>Check in on day 7, 30, 60 and 90</li><li>Reach out to anyone who goes quiet</li></ul></div>
+      </div></article>
+      <article class="step money" id="s6b"><div class="num">6B</div><div class="body">
+        <h3>Pitch the course upgrade</h3>
+        <p>We invite funded students to upgrade to the full premium course with a mentor.</p>
+        <div class="box"><span class="k">Team does</span><ul><li>Give one free preview of the premium course</li><li>Share the upgrade offer a few days after joining</li><li>Offer a 1-to-1 call to plan their learning</li><li>Keep non-buyers in the retention track</li></ul></div>
+      </div></article>
     </div>
-    <div class="arr" aria-hidden="true">→</div>
-    <div class="node core"><b>n8n automation server</b><span>Free Community edition on a small VPS (about $5–10 a month). Runs the welcome flow, batch invites, round-robin to reps, reminders and the deposit check. Free leads live in Google Sheets. Funded premium students are pushed into Odoo.</span></div>
-    <div class="arr" aria-hidden="true">→</div>
-    <div class="col">
-      <div class="node"><b>Sales reps</b><span>Lead alert on Telegram (free)</span></div>
-      <div class="node"><b>Students</b><span>WhatsApp + MailerLite emails</span></div>
-      <div class="node"><b>Odoo</b><span>Funded premium clients only</span></div>
-      <div class="node"><b>Google Classroom</b><span>Premium course access</span></div>
-      <div class="node"><b>Looker Studio</b><span>Free KPI dashboard</span></div>
-    </div>
-  </div>
-  <div class="phases3">
-    <div class="ph3"><span class="k">Week 1</span><h3>Foundation</h3><ul><li>Rent a VPS and install n8n with Docker</li><li>Verify the business in Meta and connect a number to the Cloud API</li><li>Create the Google Sheet: leads, reps, batches</li><li>Connect MailerLite and Odoo API keys in n8n</li></ul></div>
-    <div class="ph3"><span class="k">Weeks 2–3</span><h3>Core flows</h3><ul><li>Lead → sheet + MailerLite → welcome → batch invite link</li><li>“Claim my seat” → bot questions → next rep → Telegram alert</li><li>Zoom attendance → sheet</li></ul></div>
-    <div class="ph3"><span class="k">Week 4</span><h3>Money & reports</h3><ul><li>Daily IB export upload → mark funded → create Odoo contact + Classroom invite</li><li>72-hour unfunded follow-up task</li><li>Looker Studio dashboard for Monday review</li></ul></div>
+
   </div>
 </section>
-
-<!-- SYLLABUS -->
-<section id="syllabus">
-  <div class="sh"><p class="k">New course structure</p><h2>Free & premium syllabus</h2></div>
-  <div class="two">
-    <div class="course"><span class="k">Free · 5 live sessions · 60–75 min</span><h3 style="font-size:1.45rem">Forex Foundations</h3>
-      <ul class="mods">
-        <li><span class="k">Day 1</span><div><b>How forex really works</b><span>Pairs, pips, lots, sessions in GST, who moves price. Homework: open a demo.</span></div></li>
-        <li><span class="k">Day 2</span><div><b>Reading a chart</b><span>Candles, timeframes, trend vs range, support & resistance.</span></div></li>
-        <li><span class="k">Day 3</span><div><b>Risk management first</b><span>1% rule, stop loss, risk:reward, position sizing. Gift: risk sheet.</span></div></li>
-        <li><span class="k">Day 4</span><div><b>One setup + the news</b><span>A rule-based S/R setup on demo. Economic calendar basics.</span></div></li>
-        <li><span class="k">Day 5</span><div><b>Psychology & roadmap</b><span>Journaling, a 90-day plan, premium reveal.</span></div></li>
-      </ul></div>
-    <div class="course prem"><span class="k">Premium · 8 weeks · 2 classes + 1 live market room a week</span><h3 style="font-size:1.45rem">Edge Trader Program</h3>
-      <ul class="mods">
-        <li><span class="k">Wk 1</span><div><b>Market structure</b><span>Highs and lows, break of structure, top-down analysis.</span></div></li>
-        <li><span class="k">Wk 2</span><div><b>Zones that matter</b><span>Supply & demand, liquidity.</span></div></li>
-        <li><span class="k">Wk 3</span><div><b>Price-action entries</b><span>Confirmation, entry models, stop placement.</span></div></li>
-        <li><span class="k">Wk 4</span><div><b>Tools & confluence</b><span>MAs, RSI, Fibonacci as filters.</span></div></li>
-        <li><span class="k">Wk 5</span><div><b>Fundamentals & gold</b><span>CPI, NFP, rate decisions, XAU/USD reactions.</span></div></li>
-        <li><span class="k">Wk 6</span><div><b>Risk & money</b><span>Drawdown rules, scaling, prop-firm loss limits.</span></div></li>
-        <li><span class="k">Wk 7</span><div><b>Psychology & journal</b><span>Trade plan, journal metrics, losing streaks.</span></div></li>
-        <li><span class="k">Wk 8</span><div><b>Your system</b><span>Written plan, 20-trade review with mentor, certificate.</span></div></li>
-      </ul></div>
-  </div>
-</section>
-
-<!-- TEAM -->
-<section id="team">
-  <div class="sh"><p class="k">Who does what</p><h2>Team & daily tasks</h2></div>
-  <div class="cards" id="roles"></div>
-</section>
-
-<!-- SCRIPTS -->
-<section id="scripts">
-  <div class="sh"><p class="k">Ready to paste · edit [brackets]</p><h2>Message scripts</h2>
-    <p class="mut">Messages sent through the API as templates need Meta approval first. Messages posted in groups from the app do not.</p></div>
-  <div class="cards" id="scriptList" style="grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr))"></div>
-</section>
-
-<!-- KPI -->
-<section id="kpi">
-  <div class="sh"><p class="k">Checked every Monday</p><h2>Numbers we watch</h2>
-    <p class="mut">Starting targets for month one. Replace them with our real averages after 3 batches.</p></div>
-  <div class="kpis" id="kpis"></div>
-</section>
-
-<!-- ROLLOUT -->
-<section id="rollout">
-  <div class="sh"><p class="k">First 30 days · ticks save on this device</p><h2>Rollout checklist</h2></div>
-  <div class="roll" id="roll"></div>
-</section>
-
 </main>
 
-<footer><div class="wrap" style="display:grid;gap:10px">
-  <p><b>Edge Trading Academy</b> · edgeacademy.ae · internal team guide. Every student-facing message carries: “Educational content, not financial advice. Trading carries a high risk of loss.” Check UAE SCA rules on promoting brokers before running ads.</p>
-  <p>Prices checked 17 Oct 2026 and can change. Sources:</p>
-  <ul>
-    <li><a href="https://help.meetergo.com/en/integrations/automation/whatsapp-pricing" target="_blank" rel="noopener">WhatsApp pricing from October 2026 (meetergo)</a></li>
-    <li><a href="https://help.sleekflow.io/whatsapp/understanding-click-to-whatsapp-ads-ctwa-and-the-72-hour-free-window" target="_blank" rel="noopener">Click-to-WhatsApp 72-hour free window (SleekFlow)</a></li>
-    <li><a href="https://aisensy.com/pricing/usd" target="_blank" rel="noopener">AiSensy pricing</a> · <a href="https://www.make.com/en/pricing" target="_blank" rel="noopener">Make pricing</a> · <a href="https://docs.n8n.io/deploy/host-n8n/community-edition-features/" target="_blank" rel="noopener">n8n Community edition</a></li>
-    <li><a href="https://www.layerpath.com/learn/how-long-is-a-free-zoom-meeting" target="_blank" rel="noopener">Zoom free limits</a> · <a href="https://tldv.io/blog/google-meet-time-limit/" target="_blank" rel="noopener">Google Meet limit</a></li>
-  </ul>
-</div></footer>
-<div id="toast" role="status"></div>
-
-<script>
-(function(){
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
-function li(a){return '<ul>'+a.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>'}
-
-var S=[
- {n:'1',t:'Get leads',o:'Marketing lead',what:['Post free-class reels and stories every day','Run Click-to-WhatsApp and lead-form ads on Meta','Every lead is saved with its source (which ad)'],auto:['Lead form or WhatsApp click adds a row to the leads sheet','Lead is added to MailerLite with the batch tag','Welcome WhatsApp in under 1 minute + welcome email'],tool:['Meta Ads (pay for ads only)','All free leads: Google Sheets (Workspace)','Sign-up form + landing page: MailerLite','Email list: MailerLite group “Free course · batch”'],post:['Reel: “5 days. Free. Live with a real trader.”','3–5 ad creatives per batch, one new each week'],watch:['Cost per lead, by ad','% who reply to the welcome']},
- {n:'2',t:'Join WhatsApp group',o:'Community manager',what:['One WhatsApp Community: “Edge Free Class”','Inside it, one announcement group per weekly batch','Lead joins the batch that starts next Monday'],auto:['Bot sends the right batch invite link','Lead tagged with batch name, e.g. OCT-W2','Reminder if not joined after 6 hours'],tool:['WhatsApp Business app (free) runs the groups','API bot: n8n + Cloud API, or AiSensy'],post:['60-second mentor welcome video','Group rules and class schedule poster'],watch:['Join rate (target 60%+)','People who leave in 48 h'],note:'The WhatsApp API cannot add people to a group by itself. We send the invite link and the student taps to join.'},
- {n:'3',t:'Build excitement',o:'Content team',what:['2–3 posts a day in the group before and during class','Hype videos, posters, student stories, “what we give today” gifts'],auto:['All posts for a batch planned once in a calendar','The same pack is reused for all 4 groups, only dates change','MailerLite email series: one email per class day'],tool:['Canva Free + CapCut Free','Calendar: Google Sheets','MailerLite automation for emails'],post:['Myth vs fact poster','Behind-the-scenes of the trading desk','Daily free gift (e.g. risk sheet)'],watch:['Class-link clicks','Poll replies']},
- {n:'4',t:'Free class · 5 days',o:'Lead mentor + host',what:['Live class Mon–Fri at 8 PM GST, 60–75 min','Homework after each class','Day 5 ends with the 90-day roadmap'],auto:['Reminders 24 h, 1 h and 10 min before (group + email)','Attendance into the sheet after class','Replay sent only to people who missed it'],tool:['Google Meet (in our Workspace, no extra cost)','Recordings saved to Google Drive','If our plan has no Meet attendance report: Google Form check-in link'],post:['Class slides in Edge brand','Q&A clips cut into reels the next day'],watch:['Day-1 show-up (target 35%)','Day-5 finish (target 50% of Day 1)']},
- {n:'5',t:'Premium reveal',o:'Mentor + marketing',what:['On Day 5 we reveal the premium course and community','Unlock: open a broker account and deposit $50','A bonus for the first 48 hours'],auto:['Announcement with a “Claim my seat” WhatsApp button','Countdown posts 24 h and 2 h before the offer ends'],tool:['WhatsApp Community post (free)','wa.me link to our API number'],post:['90-second premium community tour','Offer poster with deadline + FAQ poster'],watch:['Button clicks ÷ Day-5 attendees (target 30%)']},
- {n:'6',t:'Split to sales',o:'Sales manager',m:1,what:['The button opens a chat with Edge','Bot asks 3 questions: experience, broker account yes/no, best call time','Lead goes to the next free sales rep'],auto:['Round-robin: skips reps marked “off”','Rep gets an alert with the lead summary','If no reply in 15 min, the sales manager is alerted'],tool:['n8n round-robin + Telegram alert (free)','Or Zoho CRM assignment rules (paid plan)'],post:['Rep intro voice note','One-page “how to open your account” guide'],watch:['First reply time (under 15 min)','Accounts opened per rep']},
- {n:'7',t:'Broker account + $50',o:'Sales rep → service head',m:1,what:['Rep sends the Edge partner link and guides KYC','Student shares account number','Deposit is checked in the broker IB portal'],auto:['Daily IB export uploaded to the sheet marks “Funded”','Funded + joined premium → new contact in Odoo with batch, rep, deposit','Premium invite + welcome email from MailerLite','Not funded after 72 h → reminder + task for rep'],tool:['Broker IB portal (free)','n8n + Google Sheets','Odoo: contact + opportunity created','Google Classroom invite (Workspace)'],post:['KYC screen-recording video','Deposit and withdrawal FAQ'],watch:['Funded ÷ accounts opened','Days from click to funded'],note:'Only funded students who join premium go into Odoo. Free leads stay in Sheets and MailerLite, so Odoo holds real clients only. Never promise profit. Every pitch says trading carries a high risk of loss and the $50 stays in the student’s own account.'},
- {n:'8A',t:'Keep & grow clients',o:'Service head',m:1,b:1,what:['Weekly live market room for funded clients','Monthly campaign: challenge, journal review, risk week','Check-ins on day 7, 30, 60 and 90'],auto:['Odoo activities for day 7, 30, 60, 90 check-ins','No activity for 21 days → reactivation email + WhatsApp'],tool:['Odoo (client record, activities)','MailerLite campaigns','WhatsApp Community (free)','Looker Studio dashboard (Workspace)'],post:['“This week’s 3 big news events” poster','Journal review invite'],watch:['Clients still active after 90 days','Repeat deposits per month']},
- {n:'8B',t:'Upgrade to premium',o:'Service head + mentor',m:1,what:['One free premium preview session','Upgrade offer on day 3 and day 10 after funding','1:1 call to plan their learning'],auto:['Upgrade offer emails on day 3 and 10 (MailerLite)','Odoo opportunity stage: Premium offer → Won / Not now','Non-buyers move to the retention track'],tool:['Odoo pipeline for upgrades','Google Classroom for the course','Payments: Stripe (fee per sale, no monthly cost)'],post:['Curriculum carousel','Real student stories (with consent)'],watch:['Premium sales ÷ funded students in 30 days']}
-];
-var cur=0,stepsEl=document.getElementById('steps'),panel=document.getElementById('panel');
-stepsEl.innerHTML=S.map(function(s,i){return '<button type="button" role="tab" class="step'+(s.m?' money':'')+(s.b?' b1':'')+'" id="st'+i+'" aria-selected="false"><span class="n">'+s.n+'</span><span class="t">'+esc(s.t)+'</span></button>'}).join('');
-function show(i,focus){
-  cur=i;var s=S[i];
-  [].forEach.call(stepsEl.children,function(b,j){b.setAttribute('aria-selected',j===i?'true':'false');b.tabIndex=j===i?0:-1});
-  if(focus){stepsEl.children[i].focus();stepsEl.children[i].scrollIntoView({block:'nearest',inline:'nearest'})}
-  panel.innerHTML='<div class="ph"><h3>Step '+s.n+' · '+esc(s.t)+'</h3><span class="owner">Owner: '+esc(s.o)+'</span></div>'+
-   '<div class="pb"><div class="box"><span class="k">What happens</span>'+li(s.what)+'</div>'+
-   '<div class="box"><span class="k">What runs automatically</span>'+li(s.auto)+'</div>'+
-   '<div class="box tool"><span class="k">Tool (lowest cost)</span>'+li(s.tool)+'</div>'+
-   '<div class="box"><span class="k">What we post</span>'+li(s.post)+'</div>'+
-   '<div class="box watch" style="grid-column:span 2"><span class="k">Number we watch</span>'+li(s.watch)+'</div></div>'+
-   '<div class="pf">'+(s.note?'<div class="note"><b>Important:</b> '+esc(s.note)+'</div>':'<span></span>')+
-   '<div class="navbtns"><button type="button" class="btn" id="prev"'+(i===0?' disabled':'')+'>← Back</button><button type="button" class="btn fill" id="next"'+(i===S.length-1?' disabled':'')+'>Next step →</button></div></div>';
-  document.getElementById('prev').onclick=function(){show(Math.max(0,cur-1),true)};
-  document.getElementById('next').onclick=function(){show(Math.min(S.length-1,cur+1),true)};
-}
-stepsEl.addEventListener('click',function(e){var b=e.target.closest('.step');if(b)show([].indexOf.call(stepsEl.children,b))});
-stepsEl.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();show(Math.min(S.length-1,cur+1),true)}if(e.key==='ArrowLeft'){e.preventDefault();show(Math.max(0,cur-1),true)}});
-show(0);
-
-/* software options */
-var O=[
- {id:'free',rec:'Start now',name:'Use what we have',sub:'Google Workspace + MailerLite + Odoo + free tools',total:'~$0–10 / month extra',totalNote:'No new subscriptions needed. Only optional: a small VPS (about $5–10) if we self-host n8n. Ads and WhatsApp message fees are separate.',rows:[
-  ['Leads & ads','Meta Ads (Click-to-WhatsApp + lead forms)','Ad spend only','Main paid cost of the whole funnel'],
-  ['All free-course leads','Google Sheets (Workspace)','Have it','One row per lead: source, batch, status'],
-  ['Emails + landing page','MailerLite','Have it','Sign-up form, batch tags, class-day emails, offers'],
-  ['Funded clients CRM','Odoo','Have it','Only students who funded $50 and joined premium'],
-  ['WhatsApp groups','WhatsApp Business app + Community','$0','All batch announcements and reminders'],
-  ['WhatsApp 1-to-1 bot','Make Free (1,000 credits/mo) or AiSensy Free Forever + Cloud API','$0 + Meta message fees','AiSensy chatbot builder is an $80/mo add-on'],
-  ['Live classes','Google Meet (Workspace)','Have it','Recordings to Drive'],
-  ['Sales alerts','Telegram bot','$0','Free, instant, works on any phone'],
-  ['Premium course','Google Classroom (Workspace)','Have it','Lessons, homework, one class per cohort'],
-  ['Design & video','Canva Free + CapCut Free','$0',''],
-  ['Dashboard','Looker Studio on Sheets + Odoo export','$0','Monday KPI review']]},
- {id:'low',name:'Ready-made add-ons',sub:'Pay for a no-code WhatsApp bot instead of building',total:'~$80+ / month extra',totalNote:'AiSensy chatbot builder add-on ($80/mo) on top of an AiSensy plan (base price not listed publicly; ask their sales). Make paid plan if we pass 1,000 credits.',rows:[
-  ['WhatsApp bot + team inbox','AiSensy + chatbot builder add-on','$80/mo add-on + plan','Shared inbox for sales, no coding'],
-  ['Automation glue','Make paid plan','Varies by credits','Connects Sheets, MailerLite, Odoo, WhatsApp'],
-  ['Everything else','Workspace, MailerLite, Odoo, free tools','Have it','Same as “Use what we have”']]},
- {id:'build',name:'Build our own',sub:'Lowest cost long term, needs a developer',total:'~$10 / month extra',totalNote:'A small VPS for n8n. Plus Meta message fees and 3–4 weeks of developer time.',rows:[
-  ['Automation server','n8n Community edition, self-hosted','$0 licence','Has ready nodes for Google Sheets, MailerLite, Odoo, Telegram, WhatsApp'],
-  ['Server','Small VPS (Docker)','~$5–10/mo','Any reliable provider'],
-  ['WhatsApp','Meta Cloud API, direct','Meta fees only','No reseller fee; 1,000 free service replies / number / month from Oct 2026'],
-  ['Data','Google Sheets → Odoo','Have it','Sheets for leads, Odoo for funded clients'],
-  ['Emails','MailerLite','Have it',''],
-  ['Classes, course, dashboard','Google Meet, Classroom, Looker Studio','Have it','']]}
-];
-var ot=document.getElementById('optTabs'),ob=document.getElementById('optBody');
-ot.innerHTML=O.map(function(o,i){return '<button type="button" role="tab" class="tab" aria-selected="false" data-i="'+i+'">'+(o.rec?'<span class="rec">'+o.rec.toUpperCase()+'</span>':'')+'<b>'+esc(o.name)+' · '+esc(o.total)+'</b><span>'+esc(o.sub)+'</span></button>'}).join('');
-function showOpt(i){
-  [].forEach.call(ot.children,function(b,j){b.setAttribute('aria-selected',j===i?'true':'false')});
-  var o=O[i];
-  ob.innerHTML='<div class="sum"><div><span class="k">Software cost</span><br><b>'+esc(o.total)+'</b></div><p class="mut" style="max-width:60ch">'+esc(o.totalNote)+'</p></div>'+
-   '<div class="tbl"><table><thead><tr><th>Job</th><th>Tool</th><th>Cost</th><th>Note</th></tr></thead><tbody>'+
-   o.rows.map(function(r){var f=/^(\$0|Have it)/.test(r[2]);return '<tr><td><b>'+esc(r[0])+'</b></td><td>'+esc(r[1])+'</td><td class="cost'+(f?' free':'')+'">'+esc(r[2])+'</td><td class="mut">'+esc(r[3])+'</td></tr>'}).join('')+'</tbody></table></div>';
-}
-ot.addEventListener('click',function(e){var b=e.target.closest('.tab');if(b)showOpt(+b.dataset.i)});
-showOpt(0);
-
-/* team */
-var R=[['Marketing lead',['Launch ads every Friday for Monday’s batch','Check cost per lead daily','Approve the content pack by Thursday']],['Content team',['Make one batch pack a week','Cut class Q&A into 3 reels','Use Edge brand templates only']],['Community manager',['Open the new batch group every Saturday','Answer the group within 1 hour, 10 AM–10 PM','Archive groups after 14 days']],['Lead mentor + host',['Teach 5 free classes per batch','Host handles chat, polls, links','Run one premium preview per cohort']],['Sales team',['Reply to every lead in under 15 minutes','Log every call result the same day','Follow the script, never promise profit']],['Service head',['Upload the IB deposit export daily, check new Odoo clients','Day 7 / 30 / 60 / 90 check-ins','Run the monthly retention campaign']],['Ops / automation',['Update batch links in the bot weekly','Check n8n or Make run logs daily','Keep Sheets → Odoo sync clean','Send the Monday KPI report']]];
-document.getElementById('roles').innerHTML=R.map(function(r){return '<div class="card"><span class="k">'+esc(r[0])+'</span>'+li(r[1])+'</div>'}).join('');
-
-/* scripts */
-var SC=[['Welcome · step 1',"Hi [Name], welcome to Edge Trading Academy 👋\nYour free 5-day forex class starts [Monday, 20 Oct] at 8:00 PM GST.\nJoin your batch group: [invite link]\nTurn on notifications so you don't miss Class 1."],['Class reminder · step 4',"Class [2] starts in 1 hour.\nToday: reading a chart and marking support & resistance.\nJoin: [Meet link]. Bring a notebook."],['Premium reveal · step 5',"You finished the 5 days. Here's the next step.\nEdge Premium: daily live market room, mentor Q&A and the 8-week program.\nOpen your account with our partner and fund $50 to unlock. First 48 h: [bonus].\nTap “Claim my seat”.\nTrading carries a high risk of loss. Educational content, not financial advice."],['First sales message · step 6',"Hi [Name], I'm [Rep] from Edge. You claimed your premium seat.\nI'll help you open the account in about 10 minutes.\nFree for a quick call now, or should I send the steps here?"],['Not funded after 72 h · step 7',"Hi [Name], your account is open but not funded yet, so premium access is on hold.\nAny questions about deposit, withdrawal or safety? I can answer them now."],['Day-30 check-in · step 8A',"Hi [Name], one month in Premium.\nSend me your last 10 trades and I'll book a 15-min journal review with a mentor this week."]];
-document.getElementById('scriptList').innerHTML=SC.map(function(s,i){return '<div class="script"><div class="r"><span class="k">'+esc(s[0])+'</span><button type="button" class="copy" data-i="'+i+'">Copy</button></div><pre id="sc'+i+'">'+esc(s[1])+'</pre></div>'}).join('');
-var toastEl=document.getElementById('toast'),tt;
-function toast(m){toastEl.textContent=m;toastEl.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toastEl.classList.remove('show')},1500)}
-document.getElementById('scriptList').addEventListener('click',function(e){var b=e.target.closest('.copy');if(!b)return;var el=document.getElementById('sc'+b.dataset.i),t=el.textContent;
-  var fb=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);toast('Text selected, press copy')};
-  try{navigator.clipboard.writeText(t).then(function(){toast('Copied')},fb)}catch(x){fb()}});
-
-/* kpis */
-var K=[['60%+','Join rate','Joined ÷ leads'],['35%+','Day-1 show-up','Live ÷ group size'],['50%+','Day-5 finish','Day 5 ÷ Day 1'],['30%+','Claim clicks','Clicks ÷ Day-5 live'],['<15 min','First reply','Click → rep message'],['Track','Cost per lead','Ad spend ÷ leads'],['Track','Funded rate','Deposits ÷ clicks'],['Track','Cost per funded','Ad spend ÷ funded'],['Track','Premium sales','÷ funded, 30 days'],['Track','90-day active','Funded still trading']];
-document.getElementById('kpis').innerHTML=K.map(function(k){return '<div class="kpi"><span class="k">'+esc(k[1])+'</span><b>'+esc(k[0])+'</b><span>'+esc(k[2])+'</span></div>'}).join('');
-
-/* rollout */
-var P=[['Week 1 · Set up',['Pick the plan: Free now, Build our own later','Verify Meta Business, connect WhatsApp number','Create the leads / reps / batches sheet','Submit message templates to Meta','Get IB portal access and export format','Set up Odoo pipeline: Funded → Premium offer → Won']],['Week 2 · Build',['Welcome + batch invite automation','Class reminders + attendance','“Claim my seat” → rep round-robin + Telegram alert','Free-course slides Day 1–5','First batch content pack']],['Week 3 · First batch',['Launch ads Friday for Monday','Open community + batch group','Run 5 classes, track daily','Train sales on scripts','Deposit → Odoo contact + Classroom invite automation']],['Week 4 · Improve',['Monday KPI review, fix the weakest step','Open first premium cohort in Classroom','Start retention campaign','Lock the 4-group monthly calendar','Write role SOPs in Google Docs']]];
-var c=0;document.getElementById('roll').innerHTML=P.map(function(p){return '<div class="rp" data-p><span class="k">'+esc(p[0])+'</span><div class="bar"><i></i></div>'+p[1].map(function(t){c++;return '<label><input type="checkbox" id="r'+c+'"><span>'+esc(t)+'</span></label>'}).join('')+'</div>'}).join('');
-var KEY='edge-guide-roll-v2',st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(x){}
-function prog(){document.querySelectorAll('[data-p]').forEach(function(p){var b=p.querySelectorAll('input'),n=0;b.forEach(function(x){if(x.checked)n++});p.querySelector('.bar i').style.width=(n/b.length*100)+'%'})}
-document.querySelectorAll('.rp input').forEach(function(x){if(st[x.id])x.checked=true;x.addEventListener('change',function(){st[x.id]=x.checked;try{localStorage.setItem(KEY,JSON.stringify(st))}catch(y){}prog()})});prog();
-
-/* nav highlight */
-var links=[].slice.call(document.querySelectorAll('.nav a'));
-if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
-document.querySelectorAll('main section').forEach(function(s){io.observe(s)})}
-})();
-</script>
+<footer><div class="wrap">Edge Trading Academy · edgeacademy.ae · Internal team plan. Every student message carries: “Educational content, not financial advice. Trading carries a high risk of loss.” We never promise profits.</div></footer>
 </body>
 </html>
