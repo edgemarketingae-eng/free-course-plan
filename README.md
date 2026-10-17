@@ -1,6 +1,6 @@
 # Edge Free Course Plan
 
-A Miro-style team board for Edge Trading Academy's automated funnel:
+A step-by-step team guide for Edge Trading Academy's automated funnel:
 free course lead → WhatsApp community → 5-day free class → premium announcement →
 auto lead split → broker account + $50 → retention and premium upgrade.
 
@@ -9,4 +9,4 @@ team SOPs, message scripts, KPI scorecard, 30-day rollout.
 
 Static single page (`index.html`), deployed on Vercel. No build step.
 
-Controls: drag to move, scroll or pinch to zoom, `1`–`9` jump to a frame, `0` fit board.
+Click a step to see what happens, who owns it, the tool, what we post and the number we watch.
