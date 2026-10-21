@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/roadmap.html", "destination": "/", "permanent": true },
+    { "source": "/roadmap", "destination": "/", "permanent": true }
+  ]
+}

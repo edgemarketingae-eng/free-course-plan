@@ -23,7 +23,7 @@ function loginPage(error) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>Sign in · Edge Free Course Plan</title>
+<title>Sign in · Edge Free Course Roadmap</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=swap">
 <style>
@@ -53,7 +53,7 @@ button:hover{background:var(--ink)}
 </style></head><body>
 <aside class="side">
   <div class="brand"><svg width="26" height="26" viewBox="0 0 34 34" aria-hidden="true"><path d="M4 26 L16 10 L22 18 L30 6" fill="none" stroke="#08E186" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 6 H30 V13" fill="none" stroke="#08E186" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>EDGE TRADING ACADEMY</div>
-  <div><h1>Free course plan <em>team only</em></h1><p>The 6-step journey from free class to long-term client. Sign in with the team login to view it.</p></div>
+  <div><h1>Free course roadmap <em>team only</em></h1><p>From Growth Hub lead to Inner Circle and upgrade, step by step. Sign in with the team login to view it.</p></div>
   <div class="dots"><i></i>INTERNAL · NOT FOR SHARING</div>
 </aside>
 <main>
