@@ -6,118 +6,150 @@
 <meta name="robots" content="noindex,nofollow">
 <title>Edge Free Course Roadmap</title>
 <meta name="description" content="Edge Trading Academy free course roadmap: Growth Hub leads, 7-class free course, Inner Circle, retention and upgrades.">
+<link rel="icon" type="image/svg+xml" href="/assets/edge-mark-green.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,700..900&family=Plus+Jakarta+Sans:wght@400..800&display=swap">
 <style>
-/* Mirrors the "Edge Roadmap" FigJam board: 4 phases, left to right. Same look as the plan page. */
+/* Edge Trading Academy brand: Ink / Off-White canvas, one loud Edge Green, Archivo Expanded + Plus Jakarta Sans. */
 :root{
   color-scheme:light;
-  --bg:#FFFFFF; --tint:#F2FAF6; --tint2:#E3F7EC; --ink:#0B2B26; --mut:#4F6964; --line:#DCE8E3;
-  --green:#08E186; --deep:#03624C;
-  /* node types */
-  --c-comm:#08E186;  --c-comm-b:#03624C;   /* community */
-  --c-class:#FFC93D; --c-class-b:#B98500;  /* free class */
-  --c-sales:#FFFFFF; --c-sales-b:#0B2B26;  /* sales team */
-  --c-topic:#EEF2F1; --c-topic-b:#9AAEA9;  /* what we teach */
-  --c-inner:#5EDBCB; --c-inner-b:#13897A;  /* inner circle + marketing */
-  --c-ret:#F2552C;   --c-ret-b:#A9300F;    /* retention */
-  --c-up:#3EA8FF;    --c-up-b:#0D6CC0;     /* upgrades */
-  --display:"Barred Black","Archivo Black","Arial Black",Impact,sans-serif;
-  --body:"Manrope",Arial,Helvetica,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --edge-green:#08E186; --emerald:#03624C; --ink:#021A1A; --off-white:#F1F7F7;
+  --sand:#E9E3D5; --pine:#0C3B40; --ice-mint:#BEEBEA; --mint-pill:#C6F2E1; --charcoal-tab:#464646;
+  --line:#D5E4E3; --mut:#4A5F5F;
+  /* node types (brand palette only) */
+  --c-comm:var(--edge-green); --c-comm-b:var(--emerald);
+  --c-class:var(--ice-mint);  --c-class-b:var(--emerald);
+  --c-sales:#FFFFFF;          --c-sales-b:var(--ink);
+  --c-topic:var(--sand);      --c-topic-b:#C9BFA8;
+  --c-inner:var(--pine);      --c-inner-b:var(--pine);
+  --c-ret:var(--emerald);     --c-ret-b:var(--emerald);
+  --c-up:var(--ink);          --c-up-b:var(--ink);
+  --display:"Archivo","Barred Black","Archivo Black","Arial Black",Impact,sans-serif;
+  --body:"Plus Jakarta Sans","Manrope","Open Sans",Arial,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--off-white);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:1.05;margin:0;text-wrap:balance}
-h1{font-size:clamp(2.1rem,5.2vw,3.6rem)}
-h2{font-size:clamp(1.5rem,3vw,2.1rem)}
-h3{font-size:1.15rem}
+h1,h2,h3,h4{font-family:var(--display);font-stretch:125%;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,5.4vw,4.2rem);line-height:.95}
+h2{font-size:clamp(1.25rem,2.6vw,1.9rem)}
+h3{font-size:1.05rem}
 p{margin:0}
-.k{font-family:var(--mono);font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--deep)}
-mark{background:linear-gradient(transparent 60%,#C3F4DA 60%);color:inherit}
-:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.k{font-size:.74rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--emerald)}
+:focus-visible{outline:3px solid var(--edge-green);outline-offset:2px}
 
-header{padding-block:28px 0}
-.brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-size:1rem;letter-spacing:.03em;flex-wrap:wrap}
-.brand nav{margin-left:auto;display:flex;gap:8px}
-.brand nav a{font-family:var(--body);font-weight:800;font-size:.85rem;letter-spacing:0;color:var(--deep);text-decoration:none;border:1.5px solid var(--line);border-radius:8px;padding:6px 12px}
-.brand nav a:hover,.brand nav a[aria-current]{border-color:var(--deep)}
-.hero{padding-block:40px 28px;display:grid;gap:14px}
-.hero .lead{font-size:1.12rem;color:var(--mut);max-width:62ch}
-
-/* legend */
-.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:6px;font-size:.86rem;color:var(--mut);font-weight:600}
+/* hero: dark Ink band, emerald glow, thin green crossing lines */
+.top-band{position:relative;overflow:hidden;background:var(--ink);color:var(--off-white)}
+.top-band .glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(60% 90% at 0% 0%,rgba(3,98,76,.95),rgba(3,98,76,0) 70%),radial-gradient(45% 70% at 95% 120%,rgba(8,225,134,.28),rgba(8,225,134,0) 70%)}
+.top-band .lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.top-band .lines line{stroke:var(--edge-green);stroke-width:2;opacity:.14}
+.bar{position:relative;display:flex;align-items:center;gap:16px;padding-block:26px 0}
+.bar img{height:44px;width:auto;display:block}
+.bar .site{margin-left:auto;font-weight:700;font-size:.9rem;color:var(--ice-mint);text-decoration:none;border:1px solid rgba(190,235,234,.35);border-radius:999px;padding:7px 16px}
+.bar .site:hover{border-color:var(--edge-green);color:var(--off-white)}
+.hero{position:relative;padding-block:56px 48px;display:grid;gap:18px}
+.hero .k{color:var(--edge-green)}
+.hero h1 .g{color:var(--edge-green)}
+.hero .lead{font-size:1.12rem;font-weight:500;color:var(--ice-mint);max-width:64ch}
+.hero .chip{justify-self:start;display:inline-flex;align-items:center;gap:10px;background:rgba(241,247,247,.07);border:1px solid rgba(190,235,234,.3);border-radius:999px;padding:9px 18px;font-weight:600;font-size:.92rem;color:var(--ice-mint)}
+.hero .chip i{width:9px;height:9px;border-radius:50%;background:var(--edge-green)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:4px;font-size:.86rem;color:var(--ice-mint);font-weight:600}
 .legend span{display:inline-flex;align-items:center;gap:7px}
-.legend i{width:14px;height:14px;border-radius:4px;border:1.5px solid}
+.legend i{width:14px;height:14px;border-radius:4px;border:1.5px solid rgba(241,247,247,.5)}
 
-/* phase strip (overview) */
-.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:8px}
-.strip a{display:grid;gap:4px;text-decoration:none;color:var(--ink);background:var(--tint);border-radius:14px;padding:14px 16px;position:relative;transition:background .15s}
-.strip a:hover{background:var(--tint2)}
+/* phase strip */
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:-30px;position:relative}
+.strip a{display:grid;gap:4px;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;box-shadow:0 14px 30px -22px rgba(2,26,26,.5);transition:border-color .15s,transform .15s}
+.strip a:hover{border-color:var(--edge-green);transform:translateY(-2px)}
 .strip b{font-weight:800;line-height:1.3}
 .strip small{color:var(--mut);font-size:.82rem;line-height:1.4}
 
 /* phases */
-.phase{background:var(--tint);border-radius:22px;padding:28px;margin-top:22px;scroll-margin-top:16px}
-.ph{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:22px}
-.ph .no{font-family:var(--display);font-size:2.4rem;line-height:1;color:var(--deep)}
-.ph p{color:var(--mut);flex-basis:100%;max-width:70ch}
+.phase{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;margin-top:22px;scroll-margin-top:16px}
+.ph{position:relative;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+.ph .no{font-family:var(--display);font-stretch:125%;font-weight:900;font-size:2.4rem;line-height:1;color:var(--edge-green);-webkit-text-stroke:1px var(--emerald)}
+.ph p{color:var(--mut);flex-basis:100%;max-width:72ch}
 
-.node{border:1.5px solid;border-radius:12px;padding:12px 14px;font-size:.92rem;line-height:1.4;background:#fff;display:grid;gap:4px;align-content:center}
+.node{position:relative;border:1.5px solid;border-radius:14px;padding:12px 14px;font-size:.92rem;line-height:1.4;background:#fff;display:grid;gap:4px;align-content:center}
 .node b{font-weight:800;font-size:.95rem}
-.node small{font-size:.82rem;color:inherit;opacity:.85}
-.comm{background:var(--c-comm);border-color:var(--c-comm-b)}
-.cls{background:var(--c-class);border-color:var(--c-class-b)}
-.sales{background:var(--c-sales);border-color:var(--c-sales-b)}
-.topic{background:var(--c-topic);border-color:var(--c-topic-b);color:#2A403C}
-.inner{background:var(--c-inner);border-color:var(--c-inner-b)}
-.ret{background:var(--c-ret);border-color:var(--c-ret-b);color:#fff}
-.up{background:var(--c-up);border-color:var(--c-up-b);color:#fff}
+.node small{font-size:.82rem;opacity:.85}
+.comm{background:var(--c-comm);border-color:var(--c-comm-b);color:var(--ink)}
+.cls{background:var(--c-class);border-color:var(--c-class-b);color:var(--ink)}
+.sales{background:var(--c-sales);border-color:var(--c-sales-b);color:var(--ink)}
+.topic{background:var(--c-topic);border-color:var(--c-topic-b);color:#2E2A20}
+.inner{background:var(--c-inner);border-color:var(--c-inner-b);color:var(--off-white)}
+.inner b{color:var(--edge-green)}
+.ret{background:var(--c-ret);border-color:var(--c-ret-b);color:var(--off-white)}
+.up{background:var(--c-up);border-color:var(--c-up-b);color:var(--off-white)}
+.up b{color:var(--edge-green)}
+a.node{text-decoration:none;transition:transform .15s,box-shadow .15s}
+a.node:hover{transform:translateY(-2px);box-shadow:0 10px 20px -12px rgba(2,26,26,.55)}
 
-/* arrows */
-.arr{display:grid;place-items:center;color:var(--ink)}
+.arr{display:grid;place-items:center;color:var(--emerald)}
 .arr svg{width:28px;height:16px}
-.down svg{transform:rotate(90deg)}
 
-/* split → 4 sales → merge */
 .split{display:grid;grid-template-columns:minmax(150px,1fr) 34px minmax(150px,1fr) 34px minmax(0,1.3fr) 34px minmax(170px,1fr);align-items:center}
 .team{display:grid;gap:10px;position:relative;padding-inline:14px}
-.team::before,.team::after{content:"";position:absolute;top:28px;bottom:28px;width:14px;border:2px solid var(--ink)}
+.team::before,.team::after{content:"";position:absolute;top:28px;bottom:28px;width:14px;border:2px solid var(--emerald)}
 .team::before{left:0;border-right:0;border-radius:10px 0 0 10px}
 .team::after{right:0;border-left:0;border-radius:0 10px 10px 0}
 .team .node{padding:10px 12px}
-.team .who{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.team .who,.col .tag{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--emerald)}
 
-/* class track */
-.track{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:14px 10px;counter-reset:c}
-.col{display:grid;grid-template-rows:auto 24px auto;gap:0;position:relative}
+.track{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:14px 10px}
+.col{display:grid;grid-template-rows:auto 24px auto;position:relative}
 .col .node.cls,.col .node.sales{min-height:112px}
-.col:not(:last-child)::after{content:"";position:absolute;right:-12px;top:52px;border:6px solid transparent;border-left:8px solid var(--ink);border-right:0;z-index:1}
-.col .stem{justify-self:center;width:2px;background:var(--c-class-b);position:relative}
-.col .stem::after{content:"";position:absolute;bottom:-1px;left:-5px;border:6px solid transparent;border-top:7px solid var(--c-class-b);border-bottom:0}
+.col:not(:last-child)::after{content:"";position:absolute;right:-12px;top:52px;border:6px solid transparent;border-left:8px solid var(--emerald);border-right:0;z-index:1}
+.col .stem{justify-self:center;width:2px;background:var(--emerald);position:relative}
+.col .stem::after{content:"";position:absolute;bottom:-1px;left:-5px;border:6px solid transparent;border-top:7px solid var(--emerald);border-bottom:0}
 .col .topic{min-height:96px}
-.col .empty{min-height:96px;border:1.5px dashed var(--line);border-radius:12px}
-.col .tag{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;opacity:.75}
+.col .empty{min-height:96px;border:1.5px dashed var(--line);border-radius:14px}
 
-/* inner circle phase */
 .inner-flow{display:grid;grid-template-columns:minmax(160px,1fr) 34px minmax(0,1.4fr) 34px minmax(160px,1fr) 34px minmax(170px,1fr);align-items:center}
 .ups{display:grid;gap:10px}
-
-/* loop */
 .loop{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:12px;align-items:center}
-.loop .note{font-size:.9rem;color:var(--mut)}
 
-/* details */
-section.more{padding-block:48px 10px}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
-.card{border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:grid;gap:8px}
-.card ul{margin:0;padding-left:20px;color:var(--mut)}
-.card li{margin:3px 0}
+/* detailed steps */
+.det{padding-block:64px 0}
+.det > .sh{display:grid;gap:10px;margin-bottom:8px}
+.det > .sh p{color:var(--mut);max-width:68ch}
+.group{margin-top:36px}
+.group > h3{display:flex;align-items:center;gap:12px;font-size:1.05rem;margin-bottom:16px}
+.group > h3 span{background:var(--charcoal-tab);color:#fff;border-radius:8px;padding:6px 10px;font-size:.9rem}
+.group > h3::after{content:"";flex:1;height:2px;background:var(--ink)}
+.step{background:#fff;border:1px solid var(--line);border-left:6px solid var(--bar,var(--line));border-radius:18px;padding:22px 24px;display:grid;gap:14px;scroll-margin-top:16px;margin-bottom:14px;transition:box-shadow .2s}
+.step:target{box-shadow:0 0 0 3px var(--edge-green)}
+.step .top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.step .top h4{font-size:1.05rem;line-height:1.15;text-transform:none}
+.pill{font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--mint-pill);color:var(--emerald);border:1px solid rgba(3,98,76,.25)}
+.pill.owner{background:var(--ink);color:var(--edge-green);border-color:var(--ink)}
+.step > p{color:var(--mut);max-width:78ch}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.box{background:var(--off-white);border-radius:14px;padding:14px 16px;font-size:.94rem}
+.box .k{display:block;margin-bottom:6px}
+.box ul{margin:0;padding-left:0;list-style:none}
+.box li{margin:4px 0;padding-left:16px;position:relative}
+.box li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--edge-green)}
+.script{border:1.5px dotted var(--emerald);border-radius:14px;padding:14px 16px;font-size:.94rem;background:#fff}
+.script .k{display:block;margin-bottom:6px}
+.script p{margin:6px 0 0;font-style:italic}
+.kpi{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.9rem}
+.kpi b{font-weight:800}
+.kpi span{background:var(--mint-pill);border-radius:999px;padding:5px 12px;font-weight:700;color:var(--emerald)}
+.back{font-size:.85rem;font-weight:800;color:var(--emerald);text-decoration:none;justify-self:start}
+.back:hover{text-decoration:underline}
+.warn{background:var(--sand);border-radius:14px;padding:12px 16px;font-size:.92rem;border-left:4px solid var(--emerald)}
 
-footer{border-top:1px solid var(--line);margin-top:56px;padding-block:26px 44px;color:var(--mut);font-size:.9rem}
+/* footer */
+footer{background:var(--ink);color:var(--ice-mint);margin-top:72px;position:relative;overflow:hidden}
+footer .in{display:grid;grid-template-columns:auto 1fr;gap:24px 48px;align-items:center;padding-block:40px 28px}
+footer img{height:40px;width:auto}
+footer .contact{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:flex-end;font-weight:600;font-size:.92rem}
+footer a{color:var(--off-white);text-decoration:none}
+footer a:hover{color:var(--edge-green)}
+footer .risk{grid-column:1/-1;font-size:.82rem;color:var(--off-white);opacity:.55;border-top:1px solid rgba(190,235,234,.15);padding-top:18px}
 
 @media (max-width:1060px){
   .split,.inner-flow{grid-template-columns:1fr;gap:4px}
@@ -130,59 +162,21 @@ footer{border-top:1px solid var(--line);margin-top:56px;padding-block:26px 44px;
   .col:not(:last-child)::after{display:none}
   .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+@media (max-width:860px){.grid3{grid-template-columns:1fr}.step{padding:18px 16px}}
 @media (max-width:640px){
   body{font-size:16px}
-  .phase{padding:20px 16px;border-radius:18px}
-  .team{grid-template-columns:1fr}
-  .ups{grid-template-columns:1fr}
-  .track{grid-template-columns:1fr}
+  .bar img{height:34px}
+  .hero{padding-block:40px 48px}
+  .phase{padding:20px 16px;border-radius:20px}
+  .team,.ups,.track,.loop{grid-template-columns:1fr}
+  .loop .arr svg{transform:rotate(90deg)}
   .col{grid-template-rows:auto}
   .col .empty,.col > span:not(.stem){display:none}
   .col .stem{height:20px}
-  .col .node.cls,.col .node.sales{min-height:0}
-  .col .topic{min-height:0}
-  .loop{grid-template-columns:1fr}
-  .loop .arr svg{transform:rotate(90deg)}
-  .cards{grid-template-columns:1fr}
-  .brand nav{margin-left:0;width:100%}
+  .col .node.cls,.col .node.sales,.col .topic{min-height:0}
+  footer .in{grid-template-columns:1fr}
+  footer .contact{justify-content:flex-start}
 }
-
-/* clickable chart nodes */
-a.node{text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
-a.node:hover{transform:translateY(-2px);box-shadow:0 8px 18px -10px rgba(11,43,38,.45)}
-a.node.ret,a.node.up{color:#fff}
-.hint{font-size:.88rem;color:var(--mut);margin-top:14px}
-
-/* detailed steps */
-.det{padding-block:56px 0}
-.det > .sh{display:grid;gap:8px;margin-bottom:8px}
-.det > .sh p{color:var(--mut);max-width:68ch}
-.group{margin-top:34px}
-.group > h3{display:flex;align-items:center;gap:12px;font-size:1.25rem;padding-bottom:12px;border-bottom:2px solid var(--ink);margin-bottom:16px}
-.group > h3 span{font-family:var(--display);color:var(--deep)}
-.step{border:1px solid var(--line);border-left:6px solid var(--bar,var(--line));border-radius:16px;padding:22px 24px;display:grid;gap:14px;scroll-margin-top:16px;margin-bottom:14px;transition:box-shadow .2s}
-.step:target{box-shadow:0 0 0 3px var(--green)}
-.step .top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
-.step .top h4{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.2rem;margin:0;line-height:1.1}
-.pill{font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:6px;background:var(--tint2);color:var(--deep)}
-.pill.owner{background:var(--ink);color:#fff}
-.step > p{color:var(--mut);max-width:78ch}
-.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.box{background:var(--tint);border-radius:12px;padding:14px 16px;font-size:.94rem}
-.box .k{display:block;margin-bottom:6px}
-.box ul{margin:0;padding-left:19px}
-.box li{margin:3px 0}
-.script{background:#fff;border:1.5px dashed var(--c-comm-b);border-radius:12px;padding:14px 16px;font-size:.94rem}
-.script .k{display:block;margin-bottom:6px}
-.script p{margin:6px 0 0;font-style:italic;color:var(--ink)}
-.kpi{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.9rem}
-.kpi b{font-weight:800}
-.kpi span{background:var(--tint2);border-radius:999px;padding:5px 12px;font-weight:700;color:var(--deep)}
-.back{font-size:.85rem;font-weight:800;color:var(--deep);text-decoration:none;justify-self:start}
-.back:hover{text-decoration:underline}
-.warn{background:#FFF6E0;border-radius:12px;padding:12px 16px;font-size:.92rem;border-left:4px solid var(--c-class-b)}
-@media (max-width:860px){.grid3,.grid2{grid-template-columns:1fr}.step{padding:18px 16px}}
 </style>
 </head>
 <body>
@@ -191,24 +185,28 @@ a.node.ret,a.node.up{color:#fff}
   <symbol id="a" viewBox="0 0 28 16"><path d="M1 8 H24 M18 2 L25 8 L18 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
-<header class="wrap"><div class="brand"><svg width="24" height="24" viewBox="0 0 34 34" aria-hidden="true"><path d="M4 26 L16 10 L22 18 L30 6" fill="none" stroke="#08E186" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 6 H30 V13" fill="none" stroke="#08E186" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>EDGE TRADING ACADEMY</div></header>
-
-<main class="wrap">
-<div class="hero">
-  <p class="k">Free course roadmap · team version</p>
-  <h1>Growth Hub lead to <mark>Inner Circle</mark> and beyond</h1>
-  <p class="lead">Every Growth Hub lead is shared evenly across 4 sales people, taken through a 7-class free course where the account is opened and the deposit confirmed, then moved into the Inner Circle, kept active with daily follow-up and upgraded after two weeks. Click any box to read the full step.</p>
-  <div class="legend" aria-label="Colour key">
-    <span><i style="background:var(--c-comm);border-color:var(--c-comm-b)"></i>Community</span>
-    <span><i style="background:var(--c-class);border-color:var(--c-class-b)"></i>Free class</span>
-    <span><i style="background:#fff;border-color:var(--c-sales-b)"></i>Sales team</span>
-    <span><i style="background:var(--c-topic);border-color:var(--c-topic-b)"></i>What we teach</span>
-    <span><i style="background:var(--c-inner);border-color:var(--c-inner-b)"></i>Inner Circle &amp; marketing</span>
-    <span><i style="background:var(--c-ret);border-color:var(--c-ret-b)"></i>Retention</span>
-    <span><i style="background:var(--c-up);border-color:var(--c-up-b)"></i>Upgrade</span>
+<div class="top-band">
+  <div class="glow"></div>
+  <svg class="lines" viewBox="0 0 1440 560" preserveAspectRatio="none" aria-hidden="true"><line x1="760" y1="-20" x2="1300" y2="600"/><line x1="1460" y1="60" x2="820" y2="600"/><line x1="1080" y1="-20" x2="1460" y2="380"/></svg>
+  <header class="wrap bar"><img src="/assets/edge-logo-green-on-dark.svg" alt="Edge Trading Academy"><a class="site" href="https://www.edgeacademy.ae">edgeacademy.ae</a></header>
+  <div class="wrap hero">
+    <p class="k">Free course roadmap</p>
+    <h1>From free class <span class="g">to Inner Circle</span></h1>
+    <p class="lead">Every Growth Hub lead is shared evenly across 4 sales people, taken through a 7-class free course where the account is opened and the deposit confirmed, then moved into the Inner Circle, kept active with daily follow-up and upgraded after two weeks. Click any box to read the full step.</p>
+    <span class="chip"><i></i>4 phases · 16 steps · 7 free classes</span>
+    <div class="legend" aria-label="Colour key">
+      <span><i style="background:var(--c-comm)"></i>Community</span>
+      <span><i style="background:var(--c-class)"></i>Free class</span>
+      <span><i style="background:#fff"></i>Sales team</span>
+      <span><i style="background:var(--c-topic)"></i>What we teach</span>
+      <span><i style="background:var(--c-inner)"></i>Inner Circle &amp; marketing</span>
+      <span><i style="background:var(--c-ret)"></i>Retention</span>
+      <span><i style="background:var(--c-up);border-color:var(--edge-green)"></i>Upgrade</span>
+    </div>
   </div>
 </div>
 
+<main class="wrap">
 <nav class="strip" aria-label="Phases">
   <a href="#p1"><span class="k">Phase 1</span><b>Lead intake &amp; split</b><small>Growth Hub leads → 4 sales people</small></a>
   <a href="#p2"><span class="k">Phase 2</span><b>7-class free course</b><small>Account opened, deposit confirmed</small></a>
@@ -239,7 +237,7 @@ a.node.ret,a.node.up{color:#fff}
 <!-- PHASE 2 -->
 <section class="phase" id="p2" aria-labelledby="p2h">
   <div class="ph"><span class="no">02</span><h2 id="p2h">The 7-class free course</h2>
-    <p>The top row is what happens in the journey; the grey row is what we teach in that class. The account is opened around class 3, a sales call helps with the deposit, and the deposit is confirmed by classes 4 and 5.</p></div>
+    <p>The top row is what happens in the journey; the sand row underneath is what we teach in that class. The account is opened around class 3, a sales call helps with the deposit, and the deposit is confirmed by classes 4 and 5.</p></div>
   <div class="track">
     <div class="col"><a class="node cls" href="#d-c12"><span class="tag">Class 1 &amp; 2</span><b>Classes 1 &amp; 2</b><small>Start of the free course</small></a><span></span><div class="empty" aria-hidden="true"></div></div>
     <div class="col"><a class="node cls" href="#d-c3"><span class="tag">Class 3</span><b>Account opens</b><small>Through class communication</small></a><span class="stem"></span><a class="node topic" href="#d-c3">Psychology · account opening screenshots</a></div>
@@ -499,7 +497,7 @@ a.node.ret,a.node.up{color:#fff}
       <div class="box"><span class="k">Publish</span><ul><li>Basith videos about the free class</li><li>Testimonial reels and carousels</li><li>"Next batch starts" posts with the sign-up link</li></ul></div>
       <div class="box"><span class="k">Done when</span><ul><li>New content is live before the next batch opens</li><li>Leads from each post are tracked</li></ul></div>
     </div>
-    <div class="warn"><strong>Compliance:</strong> show results as real student experiences, never as promises. Every post carries "Educational content, not financial advice. Trading carries a high risk of loss."</div>
+    <div class="warn"><strong>Compliance:</strong> show results as real student experiences, never as promises. Every post carries "Educational content only. Trading forex involves significant risk of loss."</div>
     <div class="kpi"><b>Watch:</b><span>Leads from loop content</span><span>Testimonials per batch</span></div>
     <a class="back" href="#p4">↑ Back to phase 4</a>
   </article>
@@ -507,6 +505,12 @@ a.node.ret,a.node.up{color:#fff}
 </section>
 </main>
 
-<footer class="wrap">Edge Trading Academy · Free course roadmap, built from the “Edge Roadmap” FigJam board. We never promise profits.</footer>
+<footer>
+  <div class="wrap in">
+    <img src="/assets/edge-logo-on-dark.svg" alt="Edge Trading Academy">
+    <div class="contact"><a href="https://www.edgeacademy.ae">www.edgeacademy.ae</a><a href="mailto:info@edgeacademy.ae">info@edgeacademy.ae</a><a href="https://wa.me/971504331943">WhatsApp +971 50 433 1943</a><span>Dubai, UAE</span></div>
+    <p class="risk">Educational content only. Trading forex involves significant risk of loss. We never promise profits.</p>
+  </div>
+</footer>
 </body>
 </html>
