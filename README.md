@@ -8,5 +8,5 @@ Wealth Circle, F1 Club, plus the marketing loop back to new leads.
 Click any box on the chart to jump to its detailed card: owner, timing, team actions,
 done-when checks, scripts and the numbers to watch.
 
-Static single page (`index.html`) behind a team login (`middleware.js`), deployed on Vercel.
+Static single page (`index.html`), deployed on Vercel. Open to anyone with the link (no login).
 Old `/roadmap.html` links redirect to `/`. No build step.
